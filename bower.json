@@ -1,0 +1,24 @@
+{
+  "name": "Sedona",
+  "version": "1.0.0",
+  "authors": [
+    "Kater-auf-Dach <kateraufdach@yandex.ru>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.3"
+  },
+  "devDependencies": {
+    "jade-field-mixins": "*"
+  }
+}

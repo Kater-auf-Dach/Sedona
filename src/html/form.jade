@@ -1,0 +1,208 @@
+extends _layout
+
+block pageTitle
+  - var pageTitle = "Оставьте свой отзыв"
+
+block page-description
+  - var pageDecrTitle = pageTitle
+  - var pageDescrText = "Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях"
+
+block content
+
+  form(action="/", method="post")
+    //- ФИО
+    .form-name
+      - formName = 'name'
+      h2.form__title Представьтесь, пожалуйста:
+
+      +textField({
+        label: 'Фамилия: <span>*</span>',
+        type: 'text',
+        placeholder: 'Иванов',
+        required: 'required'
+        })#first-name
+
+      +textField({
+        label: 'Имя: <span>*</span>',
+        type: 'text',
+        placeholder: 'Петр',
+        required: 'required'
+        })#last-name
+
+      +textField({
+        label: 'Отчество:',
+        type: 'text',
+        placeholder: 'Александрович'
+        })#father-name
+
+    //- Впечатления
+    .form-impression
+      -formName = 'impress'
+        h2.form__title Ваше общее впечатление:
+
+        +radio({
+          label: 'Скорее положительное',
+          name: 'impres',
+          id: 'positive',
+          value: 'positive',
+          checked: 'checked'
+          })
+        +radio({
+          label: 'Скорее отрицательное',
+          name: 'impres',
+          id: 'negative',
+          value: 'negative'
+          })
+
+    //- Дата
+    .form-date
+      -formName = 'date'
+      h2.form__title Даты вашей поездки:
+
+      +textField({
+        label: 'Дата приезда <span>*</span>',
+        type: 'text',
+        placeholder: '4 июля 2015',
+        required: 'required'
+        })#date-come
+
+      .minus-plus.minus-plus--date
+        button.btn.minus-plus__btn.minus-plus__btn--minus -
+        +textField({
+          label: 'Длительность пребывания',
+          type: 'text',
+          placeholder: '2 дн.',
+          })
+        button.btn.minus-plus__btn.minus-plus__btn--plus +
+
+      +textField({
+        label: 'Дата отъезда <span>*</span>',
+        type: 'text',
+        placeholder: '28 июля 2015',
+        required: 'required'
+        })#date-leave
+
+    //- Путешественникиьь
+    .form-travell
+      -formName = 'travell'
+      h2.form__title Кол-во путешественников:
+
+      .minus-plus.minus-plus--fellow
+        button.btn.minus-plus__btn.minus-plus__btn--minus -
+        +textField({
+          label: 'Количество путешественников <span>*</span>',
+          type: 'text',
+          placeholder: '2 чел.',
+          })
+        button.btn.minus-plus__btn.minus-plus__btn--plus +
+      +textField({
+        label: '№',
+        type: 'text',
+        placeholder: '1'
+        })#travell_number-1
+      +textField({
+        label: 'Фамилия: <span>*</span>',
+        type: 'text',
+        placeholder: 'Иванов',
+        required: 'required'
+        })#travell_first-name-1
+
+      +textField({
+        label: 'Имя: <span>*</span>',
+        type: 'text',
+        placeholder: 'Петр',
+        required: 'required'
+        })#travell_last-name-1
+
+      +textField({
+        label: 'Отчество:',
+        type: 'text',
+        placeholder: 'Александрович'
+        })#travell_father-name-1
+
+      +textField({
+        label: '№',
+        type: 'text',
+        placeholder: '2'
+        })#travell_number-2
+      +textField({
+        label: 'Фамилия: <span>*</span>',
+        type: 'text',
+        placeholder: 'Иванов',
+        required: 'required'
+        })#travell_first-name-2
+
+      +textField({
+        label: 'Имя: <span>*</span>',
+        type: 'text',
+        placeholder: 'Петр',
+        required: 'required'
+        })#travell_last-name-2
+
+      +textField({
+        label: 'Отчество:',
+        type: 'text',
+        placeholder: 'Александрович'
+        })#travell_father-name-2
+
+    //- Достопримечательности
+    .form-sight
+      -formName = 'sight'
+      h2.form__title Посещенные достопримечательности:
+      +checkbox({
+        label: 'Мост Дьявола',
+        id: 'sight1',
+        checked: 'checked'
+      })
+      +checkbox({
+        label: 'Гора-Колокол',
+        id: 'sight2',
+        checked: 'checked'
+      })
+      +checkbox({
+        label: 'Слайд-парк',
+        id: 'sight3',
+      })
+      +checkbox({
+        label: 'Красные скалы',
+        id: 'sight4',
+        checked: 'checked'
+      })
+
+    //- Форма загрузки фото
+    .form-photos
+      -formName = 'photos'
+      h2.form__title Загрузите фотографии
+
+      label.btn.btn--upload Перетащите фотографии сюда
+        +upload
+
+      .uploads-photos
+        - for (var x = 1; x < 7; x++)
+          figure.uploads-photos__item
+          img(source= "img/TEMP_img" + x + ".jpg")
+          figcaption= "img-" + x + ".jpg"
+          button.uploads-photos__del del
+
+    .form-submit
+      button.btn.btn--submit.btn--send(type="submit") Отправить отзыв
+
+//-
+  .form-name
+    h2.form__title Представьтесь, пожалуйста:
+    .form__item
+      label.form-name__label(for="first-name") Фамилия: *
+      input.form-name__input(type="text", id="first-name", placeholder="Иванов", required)
+    .form__item
+      label.form-name__label(for="last-name") Имя: *
+      input.form-name__input(type="text", id="last-name", placeholder="Петр", required)
+    .form__item
+      label.form-name__label(for="father-named") Отчество: *
+      input.form-name__input(type="text", id="father-name", placeholder="Александрович", required)
+
+
+
+
+
+
+

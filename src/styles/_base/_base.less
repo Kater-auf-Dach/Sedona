@@ -1,0 +1,81 @@
+a {text-decoration: none;}
+* {outline: 1px dotted blue}
+html {
+  font-size: @html-size--base;
+  box-sizing: border-box;
+}
+
+body {
+  .font(14, 21);
+  text-transform: uppercase;
+  color: @color_text;
+  background-color: @color-tertiary;
+}
+
+.wrapper {
+  max-width: 100%;
+  background-color: @color-primary;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+  @media @lg {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.page-header {
+  background-color: @color-quaternary;
+  margin-bottom: 65px;
+  padding-bottom: 505px;
+}
+.main-menu {
+  font-size: 0;
+  background-color: @color-primary;
+  position: relative;
+
+
+  &__item {
+    width: 20%;
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+  }
+  &__link {
+    display: block;
+    padding: 25px 60px;
+    margin: 0;
+    .font(14, 26, bold);
+    color: @color_text;
+  }
+  &__link--home {
+    font-size: 0;
+  }
+  &__logo {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+  }
+}
+.page-description {
+  margin-bottom: 55px;
+  text-align: center;
+  &__title {
+    margin-bottom: 40px;
+    .font(21, 26, bold);
+  }
+  &__text {
+    color: darken(@color-tertiary, 73%);
+  }
+}
+.content--index {
+  text-align: center;
+}
+.features {
+    .clearfix()
+}
+.generate-columns(3);
+.features__img{
+  min-height: 15.94rem;
+      background: url(../img/photo-city@1x.jpg) no-repeat center center;
+      background-size: cover;
+}
