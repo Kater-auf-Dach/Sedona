@@ -6,6 +6,7 @@
 ### Технологии
 
 * `HTML5, CSS3`
+* `JADE`
 * `LESS`
 * `Gulp`
 * `Git`
