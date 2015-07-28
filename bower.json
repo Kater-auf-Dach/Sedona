@@ -1,24 +1,15 @@
 {
+  "author": "Kater-auf-Dach",
   "name": "Sedona",
-  "version": "1.0.0",
-  "authors": [
-    "Kater-auf-Dach <kateraufdach@yandex.ru>"
-  ],
-  "moduleType": [
-    "globals"
-  ],
-  "license": "MIT",
+  "email": "kateraufdach@yandex.ru",
+  "version": "0.0.0",
   "ignore": [
-    "**/.*",
+    ".enb/tmp",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "libs"
   ],
   "dependencies": {
-    "normalize.css": "~3.0.3"
-  },
-  "devDependencies": {
-    "jade-field-mixins": "*"
+    "bem-components": "v2.2.1",
+    "bem-grid": "1.2.4"
   }
 }
