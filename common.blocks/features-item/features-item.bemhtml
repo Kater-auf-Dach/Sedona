@@ -1,0 +1,14 @@
+block('features-item').match(!this._done)(
+    content()(function() {
+        this._done = true;
+        return {
+            elem: 'inner',
+            content: applyNext()
+        };
+    })
+);
+
+//block('features-item').def()(function() {
+//    return applyCtx({ elem: 'inner',
+//        content: applyNext()});
+//});

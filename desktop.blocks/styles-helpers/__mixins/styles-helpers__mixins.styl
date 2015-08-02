@@ -1,0 +1,27 @@
+$fonts($fontSize, $lineHeight, $fontWeight = normal, $fontFamily = $font-family)
+  $fontValue = ($fontSize / 10)
+  $lineValue = ($lineHeight / $fontSize)
+  font-size: ($fontSize)px
+  font-size: ($fontValue)rem
+  line-height: round($lineValue, 2)
+  font-weight: $fontWeight
+  font-family: $fontFamily
+
+//$clearfix {
+//  &:before,
+//  &:after {
+//    content: " ";
+//    display: table;
+//  }
+//  &:after {
+//    clear: both;
+//  }
+//}
+
+
+
+// .font
+//   $fonts(22, 29)
+//   @extend $clearfix
+//   @media ({$sm})
+//     $fonts(14, 21)

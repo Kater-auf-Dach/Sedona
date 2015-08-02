@@ -19,38 +19,38 @@
                         {
                             url: '#',
                             content: 'Информация',
-                            mix: [ { block: 'row', elem: 'col', mods: {l: true} } ],
+                            mods: {active: true}
+                            //mix: [ { block: 'row', elem: 'col', mods: {l: true} } ],
                         },
                         {
                             url: '#',
                             content: 'Фото и видео',
-                            mix: [ { block: 'row', elem: 'col', mods: {l: true} } ],
+                            //mix: [ { block: 'row', elem: 'col', mods: {l: true} } ],
                         },
                         {
                             url: '#',
                             content: 'Главная',
-                            mods: { logo: true },
-                            mix: [ { block: 'row', elem: 'col', mods: { sw: 0, mw: 0, l: true} } ],
+                            mods : { logo : true },
+                            //mix: [ { block: 'row', elem: 'col', mods: { sw: 0, l: true} } ],
                         },
                         {
                             url: '#',
                             content: 'Карта штата',
-                            mix: [ { block: 'row', elem: 'col', mods: {l: true} } ],
+                            //mix: [ { block: 'row', elem: 'col', mods: {l: true, sof: true } } ],
 
                         },
                         {
                             url: '#',
                             content: 'Гостиницы',
-                            mix: [ { block: 'row', elem: 'col', mods: {l: true} } ],
+                            //mix: [ { block: 'row', elem: 'col', mods: {l: true} } ],
                         }
-                    ].map(function (item) {
+                    ].map(function (item, idl) {
                             return {
                                 block: 'menu-main',
                                 elem: 'item',
-                                mix: item.mix,
+                                elemMods: item.mods,
                                 content: {
                                     block: 'link',
-                                    mods: item.mods,
                                     mix: [{block: 'menu-main', elem: 'link'}],
                                     url: item.url,
                                     content: item.content
@@ -273,7 +273,8 @@
             content: [
                 {
                     elem: 'title',
-                    content: ''
+                    mix: [ { block: 'row', elem: 'col', mods: { sw: 12} } ],
+                    content: 'Заинтересовались?'
                 },
                 {
                     elem: 'text',
@@ -288,7 +289,11 @@
         },
 
         {
-            block: 'map'
+            block: 'map',
+            content: [
+                {
+                }
+            ]
         },
 
         {
@@ -297,11 +302,12 @@
             content: [
                 {
                     elem: 'logo',
-                    mix: { block: 'logo' },
+                    mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 4} } ],
                     content: '#visitsedona'
                 },
                 {
                     block: 'menu-footer',
+                    mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 4} } ],
                     content: [
                         {
                             url: '#',
@@ -333,6 +339,7 @@
                 },
                 {
                     block: 'copywrite',
+                    mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 4} } ],
                     content: [
                         {
                             elem: 'text',
@@ -347,4 +354,3 @@
         }
     ]
 });
-
