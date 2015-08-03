@@ -107,6 +107,7 @@
                             block: 'features-item',
                             mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 8} } ],
                             mods: { img: true },
+                            type : 'img',
                             content: {
                                 elem: 'img',
                                 tag: 'img',
@@ -174,6 +175,7 @@
                             block: 'features-item',
                             mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 8} } ],
                             mods: { img: true },
+                            type : 'img',
                             content: {
                                 elem: 'img',
                                 tag: 'img',

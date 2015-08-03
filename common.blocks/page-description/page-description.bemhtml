@@ -1,9 +1,6 @@
-block('page-description').match(!this._done)(
-    content()(function() {
-        this._done = true;
-        return {
-            elem: 'inner',
-            content: applyNext()
-        };
-    })
-);
+block('page-description').content()(function() {
+  return applyCtx({
+    cls: 'container',
+    content: this.ctx.content
+  });
+})

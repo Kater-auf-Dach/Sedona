@@ -1,14 +1,36 @@
-block('features-item').match(!this._done)(
-    content()(function() {
-        this._done = true;
-        return {
-            elem: 'inner',
-            content: applyNext()
-        };
-    })
-);
+// block('features-item').match(!this._done)(
+//     content()(function() {
+//         this._done = true;
+//         return {
+//             elem: 'inner',
+//             content: applyNext()
+//         };
+//     })
+// );
 
 //block('features-item').def()(function() {
 //    return applyCtx({ elem: 'inner',
 //        content: applyNext()});
 //});
+
+
+// block('features-item').content()(function() {
+//   return applyCtx({
+//     cls: 'container',
+//     content: this.ctx.content
+//   });
+// })
+
+// block('features-item').match(this.ctx.type).content()(function() {
+//   return applyCtx({
+//     content: this.ctx.content
+//   });
+// })
+
+
+block('features-item').match(!this.ctx.type).content()(function() {
+  return applyCtx({
+    cls: 'container',
+    content: this.ctx.content
+  });
+})
