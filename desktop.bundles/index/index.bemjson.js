@@ -95,7 +95,7 @@
                                 },
                                 {
                                     elem: 'number',
-                                    content: '№1'
+                                    number : '1'
                                 },
                                 {
                                     elem: 'text',
@@ -193,7 +193,7 @@
                                 },
                                 {
                                     elem: 'number',
-                                    content: '№2'
+                                    number : '2'
                                 },
                                 {
                                     elem: 'text',
@@ -218,7 +218,7 @@
                                 },
                                 {
                                     elem: 'number',
-                                    content: '№3'
+                                    number : '3'
                                 },
                                 {
                                     elem: 'text',
@@ -237,7 +237,7 @@
                                 },
                                 {
                                     elem: 'number',
-                                    content: '№4'
+                                    number : '4'
                                 },
                                 {
                                     elem: 'text',
@@ -256,7 +256,7 @@
                                 },
                                 {
                                     elem: 'number',
-                                    content: '№5'
+                                    cnumber : '5'
                                 },
                                 {
                                     elem: 'text',

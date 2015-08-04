@@ -4,3 +4,6 @@ block('page-description').content()(function() {
     content: this.ctx.content
   });
 })
+
+block('page-description').elem('title').tag()('h1');
+block('page-description').elem('text').tag()('p')
