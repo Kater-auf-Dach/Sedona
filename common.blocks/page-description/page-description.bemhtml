@@ -5,5 +5,8 @@ block('page-description').content()(function() {
   });
 })
 
-block('page-description').elem('title').tag()('h1');
-block('page-description').elem('text').tag()('p')
+block('page-description').elem('text')(tag()('p'))
+match(this.block === 'page-description',
+      this.elem === 'title'
+      )
+      (tag()('h1'))

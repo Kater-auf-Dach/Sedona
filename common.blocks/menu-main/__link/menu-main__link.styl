@@ -1,6 +1,14 @@
 .menu-main__link
-  display: block
-  padding: 25px 60px
+  width: 100%
   margin: 0
+  padding: 20px 60px
+  background-color: $color-secondary
   color: $color-text_add
-  $fonts(14, 26)
+  white-space: nowrap
+  $fonts(18, 40, 700)
+
+  @media ({$md})
+    display inline-block
+    background-color: $color-primary
+    color: $color-text
+    $fonts(14, 21, 700)

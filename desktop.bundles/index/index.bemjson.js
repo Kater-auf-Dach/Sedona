@@ -29,13 +29,8 @@
                         },
                         {
                             url: '#',
-                            content: 'Главная',
-                            mods : { logo : true },
-                            //mix: [ { block: 'row', elem: 'col', mods: { sw: 0, l: true} } ],
-                        },
-                        {
-                            url: '#',
                             content: 'Карта штата',
+                            mods: {order: 'first'}
                             //mix: [ { block: 'row', elem: 'col', mods: {l: true, sof: true } } ],
 
                         },
@@ -57,6 +52,18 @@
                                 }
                             }
                         })
+                },
+                {
+                    block: 'logo-top',
+                    content: {
+                        elem: 'link',
+                        content: {
+                            block: 'logo-top',
+                            elem: 'img',
+                            tag:"img",
+                            attrs: { src: '../../img/logo-mobile.png' }
+                        }
+                    }
                 }
             ]
         },
@@ -106,12 +113,12 @@
                         {
                             block: 'features-item',
                             mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 8} } ],
-                            mods: { img: true },
+                            mods: { image: true },
                             type : 'img',
                             content: {
                                 elem: 'img',
                                 tag: 'img',
-                                attrs: { src: "../../img/photo-city@1x.jpg", width: "100%" }
+                                attrs: { src: '../../img/photo-city@1x.jpg', width: '100%' }
                             }
                         }
                     ]
@@ -174,12 +181,12 @@
                         {
                             block: 'features-item',
                             mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 8} } ],
-                            mods: { img: true },
+                            mods: { image: true },
                             type : 'img',
                             content: {
                                 elem: 'img',
                                 tag: 'img',
-                                attrs: { src: "../../img/photo-bridge@1x.jpg", width: "100%" }
+                                attrs: { src: '../../img/photo-bridge@1x.jpg', width: '100%', height: '253' }
                             }
                         },
                         {
@@ -222,7 +229,7 @@
                                 },
                                 {
                                     elem: 'text',
-                                    content: 'Все достопримечательности находятся очень близко'
+                                    content: 'Все достопримеча&shy;тельности находятся очень близко'
                                 }
                             ]
                         },
@@ -256,7 +263,7 @@
                                 },
                                 {
                                     elem: 'number',
-                                    cnumber : '5'
+                                    number : '5'
                                 },
                                 {
                                     elem: 'text',
@@ -322,21 +329,15 @@
                         {
                             url: '#',
                             content: 'Youtube',
-                            mods: { logo: true },
                         }
                     ].map(function (item) {
                             return {
-                                block: 'menu-footer',
-                                elem: 'item',
-                                mix: item.mix,
-                                content: {
-                                    block: 'link',
-                                    mods: item.mods,
-                                    mix: [{block: 'menu-footer', elem: 'link'}],
-                                    url: item.url,
-                                    content: item.content
-                                }
+                                block: 'link',
+                                mix: [{block: 'menu-footer', elem: 'link'}],
+                                url: item.url,
+                                content: item.content
                             }
+
                         })
                 },
                 {

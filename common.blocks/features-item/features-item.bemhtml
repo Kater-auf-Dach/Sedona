@@ -5,13 +5,8 @@ block('features-item').match(!this.ctx.type).content()(function() {
   });
 })
 
-// block('features-item').elem('title').tag()('h3');
-// block('features-item').elem('number').tag()('p');
-// block('features-item').elem('text').tag()('p')
+block('features-item').elem('title').tag()('h3')
+block('features-item').elem('number').tag()('p')
+block('features-item').elem('text').tag()('p')
 
 
-block('features-item')(
-    elem('title')(
-        tag()('h3')
-    )
-);
