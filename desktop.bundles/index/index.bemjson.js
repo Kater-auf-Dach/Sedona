@@ -56,13 +56,9 @@
                 {
                     block: 'logo-top',
                     content: {
-                        elem: 'link',
-                        content: {
-                            block: 'logo-top',
-                            elem: 'img',
+                             elem: 'img',
                             tag:"img",
                             attrs: { src: '../../img/logo-mobile.png' }
-                        }
                     }
                 }
             ]
@@ -117,8 +113,22 @@
                             type : 'img',
                             content: {
                                 elem: 'img',
-                                tag: 'img',
-                                attrs: { src: '../../img/photo-city@1x.jpg', width: '100%' }
+                                tag: 'picture',
+                                content: [
+                                    {
+                                        tag: 'source',
+                                        attrs: { media: '(min-width: 1200px)', srcset: '../../img/photo-city@1x.jpg, img/feature-1-x2.jpg' }
+                                    },
+                                    {
+                                        tag: 'source',
+                                        attrs: { media: '(min-width: 768px)', srcset: '../../img/feature-1-tablet.png, img/feature-1-x2.jpg' }
+                                    },
+                                    {
+                                        tag: 'img',
+                                        attrs: { src:'img/feature-1.png' }
+                                    }
+
+                                ]
                             }
                         }
                     ]
