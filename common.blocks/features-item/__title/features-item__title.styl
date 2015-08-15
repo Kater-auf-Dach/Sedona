@@ -1,18 +1,17 @@
 .features-item__title
-  $fonts(21, 26)
-  min-height: round(@line-height * @font-size * 20)px
+  $fonts(18, 26, 700)
   min-height: round(@line-height * @font-size * 2)rem
-  margin: 0
+  margin: 0 0 ($pad_features - 2.5)
   padding: 0
 
   @media ({$md})
     $fonts(21, 26, 700)
     width: 155px
     width: 15.5rem
-    margin: 0 auto
+    margin: 0 auto ($pad_features - 2.5)
     //padding: 0 10%
 
-  @media ({$lg})
-    $fonts(21, 26, 700)
-    //padding: 0 23%
-
+  //@media ({$lg})
+  //  padding: 0 23%
+//
+//.features-item_type_icon

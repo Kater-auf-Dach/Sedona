@@ -2,6 +2,7 @@
     block: 'page',
     title: 'Home',
     head: [
+        { elem: 'meta', attrs: { charset: 'utf-8' } },
         { elem: 'meta', attrs: { name: 'description', content: '' } },
         { elem: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1' } },
         { elem: 'css', url: '_index.css' }
@@ -54,11 +55,10 @@
                         })
                 },
                 {
-                    block: 'logo-top',
+                    block: 'logo',
                     content: {
-                             elem: 'img',
-                            tag:"img",
-                            attrs: { src: '../../img/logo-mobile.png' }
+                            elem: 'img',
+                            content: 'Sedona'
                     }
                 }
             ]
@@ -89,7 +89,7 @@
                     content: [
                         {
                             block: 'features-item',
-                            mods: { color: 'blue', number: true },
+                            mods: { type: 'bg' },
                             mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 4} } ],
                             content: [
                                 {
@@ -109,7 +109,7 @@
                         {
                             block: 'features-item',
                             mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 8} } ],
-                            mods: { image: true },
+                            mods: { type: 'img' },
                             type : 'img',
                             content: {
                                 elem: 'img',
@@ -139,7 +139,7 @@
                     content: [
                         {
                             block: 'features-item',
-                            mods: { color: 'white', icon: true },
+                            mods: { type: 'icon' },
                             mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 4} } ],
                             content: [
                                 {
@@ -154,7 +154,7 @@
                         },
                         {
                             block: 'features-item',
-                            mods: { color: 'white', icon: true },
+                            mods: { type: 'icon' },
                             mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 4} } ],
                             content: [
                                 {
@@ -169,7 +169,7 @@
                         },
                         {
                             block: 'features-item',
-                            mods: { color: 'white', icon: true },
+                            mods: { type: 'icon' },
                             mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 4} } ],
                             content: [
                                 {
@@ -191,7 +191,7 @@
                         {
                             block: 'features-item',
                             mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 8} } ],
-                            mods: { image: true },
+                            mods: { type: 'img' },
                             type : 'img',
                             content: {
                                 elem: 'img',
@@ -201,7 +201,7 @@
                         },
                         {
                             block: 'features-item',
-                            mods: { color: 'blue', number: true },
+                            mods: { type: 'bg' },
                             mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 4} } ],
                             content: [
                                 {
@@ -226,7 +226,7 @@
                     content: [
                         {
                             block: 'features-item',
-                            mods: { color: 'gray', number: true },
+                            //mods: { number: true },
                             mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 4} } ],
                             content: [
                                 {
@@ -245,7 +245,7 @@
                         },
                         {
                             block: 'features-item',
-                            mods: { color: 'gray', number: true },
+                            //mods: { number: true },
                             mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 4} } ],
                             content: [
                                 {
@@ -264,7 +264,7 @@
                         },
                         {
                             block: 'features-item',
-                            mods: { color: 'gray', number: true },
+                            mods: { number: true },
                             mix: [ { block: 'row', elem: 'col', mods: { sw: 12, mw: 4} } ],
                             content: [
                                 {
