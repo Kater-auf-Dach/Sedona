@@ -29,18 +29,11 @@ gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 
-gulp.task('copy', function () {
-  gulp.src([path.src.html, path.src.styles, path.src.js])
-    .pipe(rename({dirname: ''}))
-    // .pipe(replace('_index.css', 'index.css'))
-    .pipe(gulp.dest('build'));
-});
-
-
 gulp.task('copy:html', function () {
   gulp.src(path.src.html)
     .pipe(rename({dirname: ''}))
     .pipe(replace('_index.css', 'css/index.css'))
+    .pipe(replace('_index.js', 'css/index.js'))
     .pipe(gulp.dest('build'));
 });
 
@@ -53,6 +46,15 @@ gulp.task('copy:styles', function () {
     .pipe(gulp.dest('build/css'));
 });
 
+gulp.task('copy:js', function () {
+  gulp.src(path.src.js)
+        .pipe(rename({
+            dirname: '',
+            basename: 'index',
+            extname: '.js'}))
+    .pipe(gulp.dest('build/js'));
+});
+
 // gulp.task('images', function() {
 //  gulp.src('common.blocks/**/*.{png,jpg,jpeg,svg}')
 //    .pipe(flatten())
@@ -62,6 +64,7 @@ gulp.task('copy:styles', function () {
 gulp.task('default', [
   'clean',
   'copy:html',
-  'copy:styles'
+  'copy:styles',
+  'copy:js'
 ]);
 

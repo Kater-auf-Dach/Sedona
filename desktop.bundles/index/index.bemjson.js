@@ -65,6 +65,40 @@
         },
 
         {
+            block: 'intro',
+            content: [
+                {
+                    elem: 'welcome',
+                    content: {
+                        tag : 'img',
+                        attrs : { src : '../../img/text-welcome.svg' }
+                    }
+                },
+                {
+                    elem: 'welcome-to',
+                    content: {
+                        tag : 'img',
+                        attrs : { src : '../../img/text-tothegorgeous.svg' }
+                    }
+                },
+                {
+                    elem: 'title',
+                    content: {
+                        tag : 'img',
+                        attrs : { src : '../../img/text-sedona.svg' }
+                    }
+                },
+                {
+                    elem: 'because',
+                    content: {
+                        tag : 'img',
+                        attrs : { src : '../../img/text-becausecanyon.svg' }
+                    }
+                }
+            ]
+        },
+
+        {
             block: 'page-description',
             mix: { block: 'row', mods: {sac:true, mac:true} },
             content: [
