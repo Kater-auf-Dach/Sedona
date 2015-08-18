@@ -1,0 +1,24 @@
+.menu-main__hamburger
+  position: absolute
+  bottom: 20px
+  right: 20px
+  width: 23px
+  height: 22px
+  font-size: 0
+  background-color: transparent
+  cursor: pointer
+  border-top: 4px solid $color-secondary
+  border-bottom: 4px solid $color-secondary
+
+  &:after
+    content: ''
+    display: block
+    width: 23px
+    height: 4px
+    position: absolute
+    top: 5px
+    left: 0
+    background-color: $color-secondary
+
+  @media ({$md})
+    display: none

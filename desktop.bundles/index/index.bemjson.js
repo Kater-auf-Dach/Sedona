@@ -19,48 +19,66 @@
                     content: [
                         {
                             url: '#',
-                            content: 'Информация',
-                            mods: {active: true}
-                            //mix: [ { block: 'row', elem: 'col', mods: {l: true} } ],
-                        },
-                        {
-                            url: '#',
-                            content: 'Фото и видео',
-                            //mix: [ { block: 'row', elem: 'col', mods: {l: true} } ],
-                        },
-                        {
-                            url: '#',
                             content: 'Карта штата',
-                            mods: {order: 'first'}
-                            //mix: [ { block: 'row', elem: 'col', mods: {l: true, sof: true } } ],
 
                         },
                         {
                             url: '#',
+                            content: 'Информация',
+                        },
+                        {
+                            url: '#',
+                            content: 'Фото и видео',
+                        },
+                        {
+                            url: '#',
                             content: 'Гостиницы',
-                            //mix: [ { block: 'row', elem: 'col', mods: {l: true} } ],
-                        }
-                    ].map(function (item, idl) {
-                            return {
-                                block: 'menu-main',
-                                elem: 'item',
-                                elemMods: item.mods,
-                                content: {
-                                    block: 'link',
-                                    mix: [{block: 'menu-main', elem: 'link'}],
-                                    url: item.url,
-                                    content: item.content
+                        },
+                        {
+                            url : './index.html',
+                            content : [
+                                {
+                                    tag : 'img',
+                                    attrs : { src : '../../img/logo-sedona@1x.png' }
                                 }
+                            ],
+                            bem : false
+                        }
+                    ].map(function (item, idx) {
+                            if (idx === 4) {
+                                return {
+                                    elem : 'item',
+                                    elemMods : { logo : true},
+                                    content : {
+                                        block : 'menu-main',
+                                        elem : 'link',
+                                        elemMods : { logo : true},
+                                        attrs : { href : item.url },
+                                        content : item.content
+                                    }
+                                }
+                            }
+                            return {
+                                elem : 'item',
+                                elemMods : { active : idx === 0, order_4 : idx === 0, shadow : idx === 3, order_5 : idx === 3, logo : idx === 4 },
+                                content : {
+                                    block : 'link',
+                                    mix : [{block: 'menu-main', elem: 'link'}],
+                                    url : item.url,
+                                    content : item.content,
+                                    bem : item.bem
+
+                                }
+
                             }
                         })
                 },
                 {
-                    block: 'logo',
-                    content: {
-                            elem: 'img',
-                            content: 'Sedona'
-                    }
-                }
+                    block : 'menu-main',
+                    elem : 'hamburger',
+                    content : 'open mobile menu'
+                },
+
             ]
         },
 

@@ -3,5 +3,16 @@ block('menu-main')(
 
     elem('item')(
         tag()('li')
+    ),
+    elem('link').elemMod('logo', true)(
+        tag()('a')
     )
+    //elem('hamburger').content()(function() {
+    //    return ({
+    //        content: {
+    //            elem: "span",
+    //            tag: ("span")
+    //        }
+    //    });
+    //})
 );
