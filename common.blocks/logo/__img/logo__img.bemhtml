@@ -1,6 +1,0 @@
-block('logo').elem('img') (
-    tag() ('img'),
-    attrs() ({
-        src : '../../img/logo-sedona@1x.png', srcset: '../../img/logo-sedona@2x.png 2x, ../../img/logo-sedona@3x.png 3x'
-    })
-)

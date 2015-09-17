@@ -16,3 +16,4 @@ block('menu-main')(
     //    });
     //})
 );
+//block('menu-main').js()(true);
