@@ -10,3 +10,5 @@ libs/
 _psd/
 _src/
 build/
+temp/
+npm-debug.log
